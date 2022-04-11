@@ -1,3 +1,50 @@
 *{
-    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
 }
+
+body {
+    height: 100vh;  
+    background: rgb(15, 14, 14);
+    display: grid;
+    align-items: center;
+    
+
+}
+
+.countdown {
+    
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+ 
+    
+}
+
+.countdown li{
+   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    padding: 10px ;
+    color:#09e;
+    background:rgb(36, 35, 35);
+    border-radius: 6px;
+    box-shadow: 0 1px 1px rgba(0.0.0.0,5);
+    text-align: center;
+}
+
+.countdown li span {
+    display:grid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 80px;
+}
+
+li{
+    list-style: none;
+
+
+}
+

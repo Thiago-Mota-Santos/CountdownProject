@@ -7,30 +7,37 @@ export default class Countdown {
         return new Date();
     }
 
-    get futureDate(){
+    get _futureDate(){
         return new Date(this.futureDate);
     }
 
-    get diference(){
-        return this.futureDate - this.actualDate;
+    get _diference(){
+        return this._futureDate - this._actualDate;
     }
 
-    get days (){
-        return Math.floor(this.diference / (24 * 60 * 60 * 1000)); // hours, minutes, seconds, miliseconds
+    get _days (){
+        return Math.floor(this._diference / (24 * 60 * 60 * 1000)); // hours, minutes, seconds, miliseconds
     }
    
-    get hours(){
-        return Math.floor(this.diference / (60 * 60 * 1000));
+    get _hours(){
+        return Math.floor(this._diference / (60 * 60 * 1000));
     }
-    get minutes(){
-        return Math.floor(this.diference / (60 * 1000));
+    get _minutes(){
+        return Math.floor(this._diference / (60 * 1000));
     }
-    get seconds(){
-        return Math.floor(this.diference / (1000));
+    get _seconds(){
+        return Math.floor(this._diference / (1000));
     }
 
-    // get total(){
-
-    // }
+     get total(){
+        const days    = this._days;
+        const hours   = this._hours % 24;
+        const minutes = this._minutes % 60;
+        const seconds = this._seconds % 60;
+         return[days,hours,minutes,seconds];
+         
+     
+    
+    }
 
 }
